@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.takt.bolso",
+    "sha256_cert_fingerprints": ["85:14:A2:C8:35:21:37:73:CE:53:57:14:F4:69:F7:F8:82:00:66:18:64:64:A9:A8:07:A6:41:9F:CB:11:39:C4"]
+  }
+}]
