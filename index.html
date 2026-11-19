@@ -2,45 +2,83 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Takt Bolso</title>
-<meta property="og:title" content="Takt Bolso">
-<meta property="og:description" content="Finanças do casal, uma coisa de cada vez. Baixe a versão mais nova.">
-<meta property="og:image" content="https://taktapps-dev.github.io/icon.png">
+<meta name="theme-color" content="#0D3B3A">
+<title>Bolso · dinheiro a dois</title>
+<meta name="description" content="Dinheiro a dois, sem drama. Baixe o Bolso para Android.">
+<meta property="og:title" content="Bolso">
+<meta property="og:description" content="Dinheiro a dois, sem drama. Baixe a versão mais nova.">
+<meta property="og:image" content="https://taktapps-dev.github.io/og.png">
 <link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <style>
-  :root { --bg:#F7F4EA; --card:#FFFDF7; --ink:#17181C; --muted:#6E6C64; --line:#E4DFD0; --ipe:#F2C230; --ipe-ink:#8A6100; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#121316; --card:#1C1D22; --ink:#F3EFE7; --muted:#A8A59C; --line:#26282E; --ipe-ink:#F2C230; } }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:460px; margin:0 auto; padding:40px 16px 56px; }
-  .head { display:flex; gap:14px; align-items:center; margin-bottom:28px; }
-  .head img { width:56px; height:56px; border-radius:14px; }
-  h1 { font-size:26px; margin:0; letter-spacing:-.01em; }
-  .tag { color:var(--muted); margin:2px 0 0; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px; margin-bottom:16px; }
-  .btn { display:block; text-align:center; background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600;
-         padding:16px; border-radius:16px; font-size:17px; }
-  .btn.alt { background:var(--ipe); color:#17181C; }
-  .ver { color:var(--muted); font-size:14px; margin:10px 0 0; text-align:center; }
-  h2 { font-size:17px; margin:0 0 8px; }
+  /* Maré (claro) e Noite (escuro), a mesma identidade do app. */
+  :root {
+    --bg:#F3F6F5; --card:#FFFFFF; --ink:#0D2B2A; --muted:#5E7275; --line:#E1E8E7;
+    --hero:#0D3B3A; --hero-ink:#F2FBF9; --hero-muted:#9CC2BE;
+    --cta:#0D3B3A; --cta-ink:#FFFFFF; --soft:#CFF5EC; --soft-ink:#0D3B3A;
+    --me:#18B3A6; --you:#FF7A5C; --us:#F5C451;
+  }
+  @media (prefers-color-scheme: dark) { :root {
+    --bg:#0A0C11; --card:#151922; --ink:#EEF1F7; --muted:#8B93A5; --line:#242A38;
+    --hero:linear-gradient(135deg,#1B3B4A 0%,#2C2550 55%,#4A2338 100%); --hero-ink:#FFFFFF; --hero-muted:#B8BFD2;
+    --cta:#5EEAD4; --cta-ink:#0A0C11; --soft:#123A37; --soft-ink:#5EEAD4;
+    --me:#5EEAD4; --you:#FDA4AF; --us:#C4B5FD;
+  } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.55 "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:480px; margin:0 auto; padding:24px max(16px, env(safe-area-inset-right)) 56px max(16px, env(safe-area-inset-left)); display:grid; gap:14px; }
+  .brand { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+  .brand b { font-size:26px; font-weight:800; letter-spacing:-.05em; }
+  .hero { background:var(--hero); color:var(--hero-ink); border-radius:28px; padding:28px 24px 24px; display:grid; gap:14px; }
+  .hero h1 { margin:0; font-size:34px; line-height:1.08; font-weight:800; letter-spacing:-.035em; text-wrap:balance; }
+  .hero p { margin:0; color:var(--hero-muted); }
+  .people { display:flex; gap:14px; flex-wrap:wrap; font-size:13px; font-weight:600; color:var(--hero-muted); }
+  .people i { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  .btn { display:block; text-align:center; background:var(--cta); color:var(--cta-ink); text-decoration:none; font-weight:800;
+         padding:17px; border-radius:18px; font-size:17px; }
+  .hero .btn { background:var(--hero-ink); color:#0D3B3A; }
+  .btn:focus-visible { outline:3px solid var(--me); outline-offset:3px; }
+  .ver { color:var(--hero-muted); font-size:13px; margin:0; text-align:center; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:20px; }
+  h2 { font-size:17px; margin:0 0 8px; font-weight:800; letter-spacing:-.01em; }
+  .feats { display:grid; gap:12px; margin:0; padding:0; list-style:none; }
+  .feats li { display:flex; gap:12px; align-items:flex-start; }
+  .feats .ic { flex:none; width:36px; height:36px; border-radius:12px; background:var(--soft); color:var(--soft-ink);
+               display:grid; place-items:center; font-weight:800; }
+  .feats b { display:block; }
+  .feats span { color:var(--muted); font-size:14px; }
   ol { margin:0; padding-left:20px; color:var(--muted); }
   ol li { margin:6px 0; }
+  ol b { color:var(--ink); }
   .notes { color:var(--muted); margin:0; }
+  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:8px; }
 </style>
 </head>
 <body>
 <main>
-  <div class="head">
-    <img src="icon.png" alt="">
-    <div><h1>Takt Bolso</h1><p class="tag">Finanças do casal, uma coisa de cada vez.</p></div>
+  <div class="brand">
+    <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="18" fill="#0D3B3A"/>
+      <circle cx="25.9" cy="36.8" r="12.2" fill="#18B3A6"/>
+      <circle cx="38.1" cy="27.2" r="12.2" fill="#FF7A5C"/>
+      <path d="M26.18,24.6A12.2,12.2 0 0 1 37.82,39.4A12.2,12.2 0 0 1 26.18,24.6Z" fill="#F5C451"/>
+    </svg>
+    <b>bolso</b>
   </div>
 
-  <div class="card">
-    <a class="btn alt" id="download" href="https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk">Baixar o app (Android)</a>
+  <section class="hero">
+    <h1>Dinheiro a dois, sem drama.</h1>
+    <p>Vocês dois sabem, em 3 segundos, quanto ainda dá para gastar no mês.</p>
+    <div class="people"><span><i style="background:var(--me)"></i>Meu</span><span><i style="background:var(--you)"></i>Seu</span><span><i style="background:var(--us)"></i>Nosso</span></div>
+    <a class="btn" id="download" href="https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk">Baixar o Bolso para Android</a>
     <p class="ver" id="ver">Versão mais nova</p>
-  </div>
+  </section>
 
   <div class="card" id="news" hidden>
     <h2>Novidades</h2>
@@ -48,14 +86,24 @@
   </div>
 
   <div class="card">
+    <ul class="feats">
+      <li><span class="ic">3s</span><div><b>Lance como quem fala</b><span>“mercado 182,40 nubank ontem” e pronto.</span></div></li>
+      <li><span class="ic">●●</span><div><b>Meu, seu e nosso</b><span>Cada um com sua cor, o do casal junto.</span></div></li>
+      <li><span class="ic">%</span><div><b>Orçamento no ritmo do mês</b><span>Aviso antes de estourar, não depois.</span></div></li>
+      <li><span class="ic">🔒</span><div><b>Cifrado no seu celular</b><span>Seus dados ficam guardados com criptografia.</span></div></li>
+    </ul>
+  </div>
+
+  <div class="card">
     <h2>Como instalar</h2>
     <ol>
-      <li>Toque em <b>Baixar o app</b> e espere o download terminar.</li>
+      <li>Toque em <b>Baixar o Bolso</b> e espere o download terminar.</li>
       <li>Abra o arquivo <b>takt-bolso.apk</b> (na notificação ou em Downloads).</li>
       <li>Se o Android pedir, permita <b>instalar apps desta fonte</b> para o navegador.</li>
       <li>Toque em <b>Instalar</b>. Nas próximas versões, o próprio app avisa e é só tocar em <b>Atualizar</b>.</li>
     </ol>
   </div>
+  <footer>Bolso · dinheiro a dois, sem drama.</footer>
 </main>
 <script>
   fetch('version.json?t=' + Date.now()).then(r => r.json()).then(v => {

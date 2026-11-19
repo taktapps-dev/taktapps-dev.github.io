@@ -2,51 +2,78 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Convite · Takt Bolso</title>
-<meta property="og:title" content="Convite para a carteira do casal">
-<meta property="og:description" content="Toque para entrar na carteira no Takt Bolso.">
-<meta property="og:image" content="https://taktapps-dev.github.io/icon.png">
+<meta name="theme-color" content="#0D3B3A">
+<title>Convite · Bolso</title>
+<meta property="og:title" content="Você foi convidado(a) para o Bolso">
+<meta property="og:description" content="Dinheiro a dois, sem drama. Toque para entrar na carteira do casal.">
+<meta property="og:image" content="https://taktapps-dev.github.io/og.png">
 <link rel="icon" href="../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <style>
-  :root { --bg:#F7F4EA; --card:#FFFDF7; --ink:#17181C; --muted:#6E6C64; --line:#E4DFD0; --ipe:#F2C230; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#121316; --card:#1C1D22; --ink:#F3EFE7; --muted:#A8A59C; --line:#26282E; } }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:460px; margin:0 auto; padding:40px 16px 56px; text-align:center; }
-  img { width:72px; height:72px; border-radius:18px; }
-  h1 { font-size:24px; margin:16px 0 6px; }
-  p { color:var(--muted); margin:0 0 20px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px; margin-bottom:16px; text-align:left; }
-  .btn { display:block; text-align:center; background:var(--ipe); color:#17181C; text-decoration:none; font-weight:600;
-         padding:16px; border-radius:16px; font-size:17px; margin-bottom:10px; }
-  .btn.dark { background:var(--ink); color:var(--bg); }
-  h2 { font-size:17px; margin:0 0 8px; }
+  /* Maré (claro) e Noite (escuro), a mesma identidade do app. */
+  :root {
+    --bg:#F3F6F5; --card:#FFFFFF; --ink:#0D2B2A; --muted:#5E7275; --line:#E1E8E7;
+    --hero:#0D3B3A; --hero-ink:#F2FBF9; --hero-muted:#9CC2BE;
+    --cta:#0D3B3A; --cta-ink:#FFFFFF;
+    --me:#18B3A6; --you:#FF7A5C; --us:#F5C451;
+  }
+  @media (prefers-color-scheme: dark) { :root {
+    --bg:#0A0C11; --card:#151922; --ink:#EEF1F7; --muted:#8B93A5; --line:#242A38;
+    --hero:linear-gradient(135deg,#1B3B4A 0%,#2C2550 55%,#4A2338 100%); --hero-ink:#FFFFFF; --hero-muted:#B8BFD2;
+    --cta:#5EEAD4; --cta-ink:#0A0C11;
+    --me:#5EEAD4; --you:#FDA4AF; --us:#C4B5FD;
+  } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.55 "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:460px; margin:0 auto; padding:28px max(16px, env(safe-area-inset-right)) 56px max(16px, env(safe-area-inset-left)); display:grid; gap:14px; }
+  .hero { background:var(--hero); color:var(--hero-ink); border-radius:28px; padding:30px 24px 24px; display:grid; gap:14px; justify-items:center; text-align:center; }
+  .coins { position:relative; width:120px; height:84px; }
+  .hero h1 { margin:0; font-size:28px; line-height:1.12; font-weight:800; letter-spacing:-.03em; text-wrap:balance; }
+  .hero p { margin:0; color:var(--hero-muted); }
+  .btn { display:block; width:100%; text-align:center; background:var(--hero-ink); color:#0D3B3A; text-decoration:none; font-weight:800;
+         padding:17px; border-radius:18px; font-size:17px; }
+  .btn.alt { background:var(--cta); color:var(--cta-ink); }
+  .btn:focus-visible { outline:3px solid var(--me); outline-offset:3px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:20px; display:grid; gap:12px; }
+  h2 { font-size:17px; margin:0; font-weight:800; }
   ol { margin:0; padding-left:20px; color:var(--muted); }
   li { margin:6px 0; }
-  .bad { display:none; }
+  .bad { display:none; text-align:center; color:var(--muted); }
+  footer { text-align:center; color:var(--muted); font-size:13px; }
 </style>
 </head>
 <body>
 <main>
-  <img src="../icon.png" alt="">
-  <h1>Convite para a carteira do casal</h1>
-  <p id="lead">Toque abaixo para abrir o Takt Bolso e aceitar.</p>
-
-  <div id="ok">
-    <a class="btn" id="open" href="#">Abrir no app</a>
-    <div class="card">
-      <h2>Ainda não tem o app?</h2>
-      <ol>
-        <li>Baixe e instale o Takt Bolso.</li>
-        <li>Volte nesta mensagem e toque no link do convite de novo.</li>
-      </ol>
-      <br>
-      <a class="btn dark" href="../">Baixar o Takt Bolso</a>
+  <section class="hero">
+    <div class="coins" aria-hidden="true">
+      <svg width="120" height="84" viewBox="0 0 120 84">
+        <circle cx="44" cy="50" r="32" style="fill:var(--me)"/>
+        <circle cx="76" cy="34" r="32" style="fill:var(--you)"/>
+        <path d="M48.14,18.28A32,32 0 0 1 71.86,65.72A32,32 0 0 1 48.14,18.28Z" style="fill:var(--us)"/>
+      </svg>
     </div>
+    <h1>Bora cuidar do dinheiro a dois?</h1>
+    <p id="lead">Você foi convidado(a) para a carteira do casal no Bolso. O que é de cada um continua de cada um; o que é nosso, a gente vê junto.</p>
+    <div id="ok" style="width:100%">
+      <a class="btn" id="open" href="#">Entrar na carteira</a>
+    </div>
+  </section>
+
+  <div class="card" id="install">
+    <h2>Ainda não tem o Bolso?</h2>
+    <ol>
+      <li>Baixe e instale o Bolso.</li>
+      <li>Volte nesta mensagem e toque no link do convite de novo.</li>
+    </ol>
+    <a class="btn alt" href="../">Baixar o Bolso</a>
   </div>
   <p class="bad" id="bad">Esse link está incompleto. Peça para a outra pessoa mandar o convite de novo.</p>
+  <footer>Bolso · dinheiro a dois, sem drama.</footer>
 </main>
 <script>
   const t = new URLSearchParams(location.search).get('t') || '';

@@ -1,7 +1,7 @@
 {
-  "version": "0.5.0",
-  "build": 5,
+  "version": "0.6.0",
+  "build": 6,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Convite para a carteira do casal por link, entrada com Google e aviso de atualização.",
+  "notes": "Visual novo do Bolso: tema claro e escuro, ícone novo, 'Livre até o fim do mês' no Início, modo discreto e tour guiado.",
   "date": "2026-11-19"
 }
