@@ -1,7 +1,7 @@
 {
-  "version": "0.7.2",
-  "build": 9,
+  "version": "0.7.3",
+  "build": 10,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Agora a atualização abre em pop-up e baixa e instala pelo próprio app. O assistente passou a ler fotos de notas e áudios.",
+  "notes": "Foto da nota em modo documento: recorta sozinha e fica com cara de escaneada. A foto vira o comprovante do lançamento, e dá para ampliar com zoom. Respostas mais rápidas para fotos.",
   "date": "2026-11-19"
 }
