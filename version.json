@@ -1,7 +1,7 @@
 {
-  "version": "0.7.6",
-  "build": 13,
+  "version": "0.7.7",
+  "build": 14,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Toque no lançamento do chat para editar. Se faltar algo, o assistente pergunta com respostas prontas para tocar. Na foto da nota, o nome da empresa vem do CNPJ.",
-  "date": "2026-11-19"
+  "notes": "A partir desta versão, o aviso de versão nova chega na hora, por notificação.",
+  "date": "2026-11-20"
 }
