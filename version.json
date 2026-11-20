@@ -1,7 +1,7 @@
 {
-  "version": "0.7.8",
-  "build": 15,
+  "version": "0.7.9",
+  "build": 16,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Teste do aviso na hora: se esta notificação chegou, está tudo funcionando.",
+  "notes": "Nova área Open Finance: conecte seus bancos pelo Meu Pluggy sem sair do app, com contas e saldos de cada banco.",
   "date": "2026-11-20"
 }
