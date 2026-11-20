@@ -1,7 +1,7 @@
 {
-  "version": "0.7.3",
-  "build": 10,
+  "version": "0.7.4",
+  "build": 11,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Foto da nota em modo documento: recorta sozinha e fica com cara de escaneada. A foto vira o comprovante do lançamento, e dá para ampliar com zoom. Respostas mais rápidas para fotos.",
+  "notes": "Foto da nota no estilo scanner: o app acha a nota, recorta o fundo e endireita, e você pode ajustar os cantos. Cor mágica nova: papel branco e texto preto, sem manchas.",
   "date": "2026-11-19"
 }
