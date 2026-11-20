@@ -1,7 +1,7 @@
 {
-  "version": "0.7.5",
-  "build": 12,
+  "version": "0.7.6",
+  "build": 13,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Leitura das fotos de notas mais rápida e confiável. Se não der para ler, a foto fica guardada como comprovante do lançamento.",
+  "notes": "Toque no lançamento do chat para editar. Se faltar algo, o assistente pergunta com respostas prontas para tocar. Na foto da nota, o nome da empresa vem do CNPJ.",
   "date": "2026-11-19"
 }
