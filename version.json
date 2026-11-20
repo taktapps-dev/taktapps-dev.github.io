@@ -1,7 +1,7 @@
 {
-  "version": "0.7.0",
-  "build": 7,
+  "version": "0.7.1",
+  "build": 8,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Assistente no botão +: converse para lançar gastos e tirar dúvidas, mande foto da nota ou um áudio. E agora dá para entrar com Google.",
+  "notes": "Assistente no botão +: converse para lançar gastos e tirar dúvidas, mande foto da nota ou um áudio. Entrar com Google. E daqui em diante as atualizações chegam por notificação e instalam pelo próprio app.",
   "date": "2026-11-19"
 }
