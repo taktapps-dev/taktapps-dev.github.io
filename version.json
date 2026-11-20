@@ -1,7 +1,7 @@
 {
-  "version": "0.6.0",
-  "build": 6,
+  "version": "0.7.0",
+  "build": 7,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "Visual novo do Bolso: tema claro e escuro, ícone novo, 'Livre até o fim do mês' no Início, modo discreto e tour guiado.",
+  "notes": "Assistente no botão +: converse para lançar gastos e tirar dúvidas, mande foto da nota ou um áudio. E agora dá para entrar com Google.",
   "date": "2026-11-19"
 }
