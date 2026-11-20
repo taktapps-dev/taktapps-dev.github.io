@@ -1,7 +1,7 @@
 {
-  "version": "0.7.7",
-  "build": 14,
+  "version": "0.7.8",
+  "build": 15,
   "url": "https://github.com/taktapps-dev/taktapps-dev.github.io/releases/latest/download/takt-bolso.apk",
-  "notes": "A partir desta versão, o aviso de versão nova chega na hora, por notificação.",
+  "notes": "Teste do aviso na hora: se esta notificação chegou, está tudo funcionando.",
   "date": "2026-11-20"
 }
